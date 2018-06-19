@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1884748369259556}
+  m_IsPrefabParent: 1
+--- !u!1 &1884748369259556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4560639550800814}
+  - component: {fileID: 114370393289037546}
+  m_Layer: 0
+  m_Name: House renderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4560639550800814
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884748369259556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1383018, y: 1.744534, z: -0.111111045}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114370393289037546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884748369259556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b074d88fa7c34d54b873ccf051d2fff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  len_o: 800
+  bre_o: 600
+  len_s: 60
+  bre_s: 40
+  doorb: {fileID: 4691069632353204, guid: 07daa9934c2feb644b5337db159c953b, type: 2}
+  sc: {fileID: 4579576256622286, guid: 11d69a5584a5e2b45b7c30f55da7301c, type: 2}
+  windowprefab: {fileID: 4398816504523338, guid: addf7720285877c40a9db88d27f2e855,
+    type: 2}
