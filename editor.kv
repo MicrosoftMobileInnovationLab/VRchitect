@@ -1,0 +1,91 @@
+<CustButton@Button>:
+    font_size:25
+    size_hint:0.3,0.08
+    fontcolor:1,1,1,1
+    background_color:0,1,1,1
+
+<CustLabel@Label>:
+    font_size:25
+    size_hint:0.4,0.065
+    fontcolor:1,1,1,1
+    background_color:0,0.8,.8,1
+
+<CustField@TextInput>:
+    font_size:22
+    size_hint:0.4,0.065
+    fontcolor:1,1,1,1
+    background_color:0,0.8,.8,1
+
+
+
+Root:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0.8, 0.8, 1
+            Rectangle:
+                # self here refers to the widget i.e FloatLayout
+                pos: self.pos
+                size: self.size
+        CustButton:
+            text: "Upload"
+            pos_hint: {'x': 0.35, 'center_y': .65}
+            on_release: root.show_load()
+        CustButton:
+            text: "OK."
+            pos_hint: {'x': 0.17, 'center_y': .08}
+        CustButton:
+            text: "Exit"
+            pos_hint: {'x': 0.53, 'center_y': .08}
+            on_release: root.cancel()
+        CustLabel:
+            text:"Length:          "
+            pos_hint:{'x': 0.17, 'center_y': .45}
+        CustLabel:
+            text:"Breadth:          "
+            pos_hint:{'x': 0.17, 'center_y': .35}
+        CustLabel:
+            text:"Height:          "
+            pos_hint:{'x': 0.17, 'center_y': .25}
+        CustField:
+            text:''
+            pos_hint:{'x': 0.53, 'center_y': .45}
+        CustField:
+            text:''
+            pos_hint:{'x': 0.53, 'center_y': .35}
+        CustField:
+            text:''
+            pos_hint:{'x': 0.53, 'center_y': .25}
+        Label:
+            text:"VRchitect"
+            font_size:65
+            size_hint:0.4,0.5
+            fontcolor:1,1,1,1
+            background_color:0,0.8,.8,1
+            pos_hint:{'x': 0.3, 'center_y': .8}
+
+
+
+
+
+
+
+
+<LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Load"
+                on_release: root.load(filechooser.path, filechooser.selection)
