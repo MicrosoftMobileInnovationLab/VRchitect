@@ -102,9 +102,34 @@ public class blox : MonoBehaviour {
         float x_scale = len_s / len_o;
         float y_scale = bre_s / bre_o;
 
-        //reading the json file
-        string path = Application.persistentDataPath + "/data_file7.json";
+        #if UNITY_EDITOR
+            //reading the json file
+            string path = Application.streamingAssetsPath + "/data_file.json";
+        string path2 = Application.persistentDataPath + "/jar_loc.txt";
+        File.WriteAllText(path2, path);
+        // string path = "Resources/data_file.json";
         jsondata = File.ReadAllText(path);
+
+
+        #elif UNITY_ANDROID
+            string  path = "jar:file://" + Application.dataPath + "!/assets/data_file.json";
+            string path2 = Application.persistentDataPath + "/jar_loc.txt";
+            File.WriteAllText(path2,path);
+            WWW wwwfile = new WWW(path);
+            while (!wwwfile.isDone) { }
+            var filepath = string.Format("{0}/{1}", Application.persistentDataPath, "data_file.json");
+            File.WriteAllBytes(filepath, wwwfile.bytes);
+
+            StreamReader wr = new StreamReader(filepath);
+            string line;
+            while ((line = wr.ReadLine()) != null)
+            {
+                jsondata += line;
+            }
+#endif
+
+
+
         JSONNode jsonNode = SimpleJSON.JSON.Parse(jsondata);
         
         //adding each wall instance into the list and using the wallmaker() to render walls
@@ -140,16 +165,40 @@ public class blox : MonoBehaviour {
         }
 
 
-        //adding door instances to the list and using the dormaker() to render the doors 
-        door_stuff h1 = new door_stuff();
-        h1.v1 = new Vector2(-2, -5);
-        h1.v2 = new Vector2(2, -5);
-        door_pairs.Add(h1);
+        //adding door instances to the list and using the dormaker() to render the doors
+         path = Application.streamingAssetsPath + "/data_file_doors.json";
+        path2 = Application.persistentDataPath + "/jar_loc_doors.txt";
+        File.WriteAllText(path2, path);
+        // string path = "Resources/data_file.json";
+        jsondata = File.ReadAllText(path);
+        k = 0; ;
+        while (true)
+        {
+
+            if (jsonNode["door"][k] != null)
+            {
+
+                door_stuff h0 = new door_stuff();
+                h0.v1.x = x_scale * jsonNode["door"][k][0][0].AsFloat;
+                h0.v1.y = y_scale * jsonNode["door"][k][0][1].AsFloat;
+                h0.v2.x = x_scale * jsonNode["door"][k][1][0].AsFloat;
+                h0.v2.y = y_scale * jsonNode["door"][k][1][1].AsFloat;
+
+                door_pairs.Add(h0);
+            }
+            else
+            {
+                break;
+            }
+            k++;
+        }
 
         j = 0;
+        GameObject door_parent = new GameObject();
+        door_parent.name = "door parent";
         foreach (door_stuff i in door_pairs)
         {
-            dormaker(i.v1, i.v2, j);
+            dormaker(i.v1, i.v2, j, door_parent);
             j++;
         }
 
@@ -231,7 +280,7 @@ public class blox : MonoBehaviour {
         wall.transform.localScale = new Vector3(len + 1, 5, 2);
         wall.name = "wall" + count;
     }
-    void dormaker(Vector2 a, Vector2 b, int count)
+    void dormaker(Vector2 a, Vector2 b, int count,GameObject dp)
     {
         Vector2 m;
         float ang;
@@ -240,6 +289,7 @@ public class blox : MonoBehaviour {
         ang = angle(a, b);
 
         var derp = Instantiate(doorb, new Vector3(m.x, 0, m.y), Quaternion.Euler(-90, ang, 0));
+        derp.transform.parent = dp.transform;
         derp.name = "door" + count;
         doorb.transform.Rotate(new Vector3(-90, 90, 0));
     }
