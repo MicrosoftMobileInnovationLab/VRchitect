@@ -1,24 +1,26 @@
 <CustButton@Button>:
-    font_size:25
+    font_size:45
     size_hint:0.3,0.08
     fontcolor:1,1,1,1
     background_color:0,1,1,1
 
 <CustLabel@Label>:
-    font_size:25
+    font_size:45
     size_hint:0.4,0.065
     fontcolor:1,1,1,1
     background_color:0,0.8,.8,1
 
-<CustField@TextInput>:
-    font_size:22
-    size_hint:0.4,0.065
-    fontcolor:1,1,1,1
-    background_color:0,0.8,.8,1
+
+
+
 
 
 
 Root:
+
+    hgt: hgt
+    len: len
+    bre: bre
     FloatLayout:
         canvas.before:
             Color:
@@ -32,8 +34,9 @@ Root:
             pos_hint: {'x': 0.35, 'center_y': .65}
             on_release: root.show_load()
         CustButton:
-            text: "OK."
+            text: "OK"
             pos_hint: {'x': 0.17, 'center_y': .08}
+            on_release:root.submit()
         CustButton:
             text: "Exit"
             pos_hint: {'x': 0.53, 'center_y': .08}
@@ -47,29 +50,45 @@ Root:
         CustLabel:
             text:"Height:          "
             pos_hint:{'x': 0.17, 'center_y': .25}
-        CustField:
+
+        TextInput:
+            id: len
             text:''
             pos_hint:{'x': 0.53, 'center_y': .45}
-        CustField:
+            font_size:45
+            size_hint:0.4,0.065
+            fontcolor:1,1,1,1
+            background_color:0,0.8,.8,1
+
+        TextInput:
+            id: bre
             text:''
             pos_hint:{'x': 0.53, 'center_y': .35}
-        CustField:
+            font_size:45
+            size_hint:0.4,0.065
+            fontcolor:1,1,1,1
+            background_color:0,0.8,.8,1
+
+
+        TextInput:
+            id: hgt
             text:''
             pos_hint:{'x': 0.53, 'center_y': .25}
+            font_size:45
+            size_hint:0.4,0.065
+            fontcolor:1,1,1,1
+            background_color:0,0.8,.8,1
+        CustButton:
+            text: "OK"
+            pos_hint: {'x': 0.17, 'center_y': .08}
+            on_release:root.sub()
         Label:
             text:"VRchitect"
-            font_size:65
+            font_size:100
             size_hint:0.4,0.5
             fontcolor:1,1,1,1
             background_color:0,0.8,.8,1
             pos_hint:{'x': 0.3, 'center_y': .8}
-
-
-
-
-
-
-
 
 <LoadDialog>:
     BoxLayout:
@@ -81,7 +100,7 @@ Root:
 
         BoxLayout:
             size_hint_y: None
-            height: 30
+            height: 60
             Button:
                 text: "Cancel"
                 on_release: root.cancel()
