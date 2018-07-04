@@ -117,6 +117,9 @@ class Root(FloatLayout):
         self.dismiss_popup()
 
     def sub(self):
+        global h
+        global b
+        global l
         h=float(self.hgt.text)
         b=float(self.bre.text)
         l=float(self.len.text)
