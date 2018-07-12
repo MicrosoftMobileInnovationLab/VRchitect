@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using SimpleJSON;
+using System.Linq;
+using Dynagon;
 
 
 public class blox : MonoBehaviour {
@@ -95,6 +97,7 @@ public class blox : MonoBehaviour {
     List<stair_stuff> stair_pairs = new List<stair_stuff>();
     List<window_stuff> window_pairs = new List<window_stuff>();
 
+
     
     void Start() {
 
@@ -103,8 +106,8 @@ public class blox : MonoBehaviour {
         float y_scale = bre_s / bre_o;
 
         #if UNITY_EDITOR
-            //reading the json file
-            string path = Application.streamingAssetsPath + "/data_file.json";
+        //reading the json file
+        string path = Application.streamingAssetsPath + "/data_file.json";
         string path2 = Application.persistentDataPath + "/jar_loc.txt";
         File.WriteAllText(path2, path);
         // string path = "Resources/data_file.json";
@@ -166,12 +169,8 @@ public class blox : MonoBehaviour {
 
 
         //adding door instances to the list and using the dormaker() to render the doors
-         path = Application.streamingAssetsPath + "/data_file_doors.json";
-        path2 = Application.persistentDataPath + "/jar_loc_doors.txt";
-        File.WriteAllText(path2, path);
-        // string path = "Resources/data_file.json";
-        jsondata = File.ReadAllText(path);
-        k = 0; ;
+        
+        k = 0; 
         while (true)
         {
 
@@ -233,6 +232,57 @@ public class blox : MonoBehaviour {
         }
 
 
+        //floor and cieling maker
+        var floor_vertices = new List<Vector3>();
+        k = 0;
+        while (true)
+        {
+
+            if (jsonNode["floor"][k] != null)
+            {
+
+                Vector3 h0;
+                h0.x = x_scale * jsonNode["door"][k][0][0].AsFloat;
+                h0.y = y_scale * jsonNode["door"][k][0][1].AsFloat;
+                h0.z = 0.0f;
+
+                Vector3 h1;
+                h1.x = x_scale * jsonNode["door"][k][0][0].AsFloat;
+                h1.y = y_scale * jsonNode["door"][k][0][1].AsFloat;
+                h1.z = 0.0f;
+
+
+
+                floor_vertices.Add(h0);
+                floor_vertices.Add(h0);
+            }
+            else
+            {
+                break;
+            }
+            k++;
+        }
+
+
+        floor_vertices.Add(new Vector3(0, 0, 0));
+        floor_vertices.Add(new Vector3(0, 5, 0));
+        floor_vertices.Add(new Vector3(5, 5, 0));
+        floor_vertices.Add(new Vector3(2.5f, 10, 0));
+        floor_vertices.Add(new Vector3(5, 0, 0));
+
+        floor_vertices.Add(new Vector3(0, 0, 5));
+        floor_vertices.Add(new Vector3(0, 5, 5));
+        floor_vertices.Add(new Vector3(5, 5, 5));
+        floor_vertices.Add(new Vector3(2.5f, 10, 5));
+        floor_vertices.Add(new Vector3(5, 0, 5));
+
+
+        Factory.Create("Floor", floor_vertices);
+
+       
+
+        Factory.Create("Cieling", floor_vertices);
+
     }
 
     //functions for generation
@@ -284,14 +334,17 @@ public class blox : MonoBehaviour {
     {
         Vector2 m;
         float ang;
-
+        float  door_length = Leng(a,b);
         m = midpoint(a, b);
         ang = angle(a, b);
+        Vector3 s = doorb.localScale;
+        
 
         var derp = Instantiate(doorb, new Vector3(m.x, 0, m.y), Quaternion.Euler(-90, ang, 0));
-        derp.transform.parent = dp.transform;
+        //derp.transform.parent = dp.transform;
         derp.name = "door" + count;
         doorb.transform.Rotate(new Vector3(-90, 90, 0));
+        derp.transform.localScale = new Vector3(door_length/s.x, 50, s.z);
     }
     void windowmaker(Vector2 a, Vector2 b, int count)
     {

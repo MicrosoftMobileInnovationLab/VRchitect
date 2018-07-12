@@ -59,6 +59,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Background.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Bottom.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Illumination.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Meteor.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Meteors.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Orbit.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\Polyhedrons.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\RandomShapes.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\RoughPlane.cs" />
+    <Compile Include="Assets\Dynagon\Samples\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Containers.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Factory.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Functions.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Polygon.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Polygon2D.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Polygon3D.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Primitives.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Triangulator2D.cs" />
+    <Compile Include="Assets\Dynagon\Scripts\Triangulator3D.cs" />
+    <Compile Include="Assets\Dynagon\Tests\Scripts\DocumentTest.cs" />
+    <Compile Include="Assets\Dynagon\Tests\Scripts\FactoryTest.cs" />
+    <Compile Include="Assets\Dynagon\Tests\Scripts\TestRunner.cs" />
+    <Compile Include="Assets\Dynagon\Tests\Scripts\TestUtilities.cs" />
+    <Compile Include="Assets\Dynagon\Tests\Scripts\TriangulatorTest.cs" />
     <Compile Include="Assets\ProCore\blox.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
     <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
@@ -92,10 +116,10 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -296,19 +320,19 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/My/Desktop/unity_projects/VRchitect_stuff/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/My/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
