@@ -31,7 +31,7 @@ public class forward : MonoBehaviour {
             float ry = legright.transform.localPosition.y;
             if (ly - ry > 0.15f || ry - ly > 0.15f)
             {
-                m_CharacterController.Move(cam.transform.forward * 2 * Time.deltaTime);
+                m_CharacterController.Move(cam.transform.forward * 5 * Time.deltaTime);
 
             }
             

@@ -59,62 +59,161 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Background.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Bottom.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Illumination.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Meteor.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Meteors.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Orbit.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\Polyhedrons.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\RandomShapes.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\RoughPlane.cs" />
-    <Compile Include="Assets\Dynagon\Samples\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Containers.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Factory.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Functions.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Polygon.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Polygon2D.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Polygon3D.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Primitives.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Triangulator2D.cs" />
-    <Compile Include="Assets\Dynagon\Scripts\Triangulator3D.cs" />
-    <Compile Include="Assets\Dynagon\Tests\Scripts\DocumentTest.cs" />
-    <Compile Include="Assets\Dynagon\Tests\Scripts\FactoryTest.cs" />
-    <Compile Include="Assets\Dynagon\Tests\Scripts\TestRunner.cs" />
-    <Compile Include="Assets\Dynagon\Tests\Scripts\TestUtilities.cs" />
-    <Compile Include="Assets\Dynagon\Tests\Scripts\TriangulatorTest.cs" />
-    <Compile Include="Assets\ProCore\blox.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+    <Compile Include="Assets\libs\CSG\Classes\CSG_Model.cs" />
+    <Compile Include="Assets\libs\CSG\Classes\CSG_Node.cs" />
+    <Compile Include="Assets\libs\CSG\Classes\CSG_Plane.cs" />
+    <Compile Include="Assets\libs\CSG\Classes\CSG_Polygon.cs" />
+    <Compile Include="Assets\libs\CSG\Classes\CSG_Vertex.cs" />
+    <Compile Include="Assets\libs\CSG\CSG.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Background.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Bottom.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Illumination.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Meteor.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Meteors.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Orbit.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\Polyhedrons.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\RandomShapes.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\RoughPlane.cs" />
+    <Compile Include="Assets\libs\Dynagon\Samples\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Containers.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Factory.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Functions.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Polygon.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Polygon2D.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Polygon3D.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Primitives.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Triangulator2D.cs" />
+    <Compile Include="Assets\libs\Dynagon\Scripts\Triangulator3D.cs" />
+    <Compile Include="Assets\libs\Dynagon\Tests\Scripts\DocumentTest.cs" />
+    <Compile Include="Assets\libs\Dynagon\Tests\Scripts\FactoryTest.cs" />
+    <Compile Include="Assets\libs\Dynagon\Tests\Scripts\TestRunner.cs" />
+    <Compile Include="Assets\libs\Dynagon\Tests\Scripts\TestUtilities.cs" />
+    <Compile Include="Assets\libs\Dynagon\Tests\Scripts\TriangulatorTest.cs" />
+    <Compile Include="Assets\libs\GazeUI For Canvas\Scripts\subtract.cs" />
+    <Compile Include="Assets\libs\GazeUI For Canvas\Scripts\UI\EyeRaycaster.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\3rd Party Assets\Dissolve Edge by Moonflower Carnivore\Scripts\HideIfDisabledDrawer.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Experimental\Trigger Popup\Scripts\TriggerUI.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_BrightnessAdjustment.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_ButtonSound.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_DissolveEdge.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_Exit.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_LaunchURL.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_MenuCamControl.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_PAK.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_PanelAnim.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_PressAnyKey.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_Quality.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_RotateObject.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_TiltWindow.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_UIAnimManager.cs" />
+    <Compile Include="Assets\libs\Lomenu UI\Scripts\LUI_Volume.cs" />
+    <Compile Include="Assets\libs\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
+    <Compile Include="Assets\libs\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
+    <Compile Include="Assets\libs\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
+    <Compile Include="Assets\libs\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
+    <Compile Include="Assets\libs\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
+    <Compile Include="Assets\libs\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
+    <Compile Include="Assets\libs\SMC Pack 1\Demo\DemoAssets\V_SMC_Camera.cs" />
+    <Compile Include="Assets\libs\SMC Pack 1\Demo\DemoAssets\V_SMC_Handler.cs" />
+    <Compile Include="Assets\libs\SMC Pack 1\Demo\DemoAssets\V_Text.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Scenes\hover.cs" />
+    <Compile Include="Assets\scripts\blox.cs" />
+    <Compile Include="Assets\scripts\colorer.cs" />
+    <Compile Include="Assets\scripts\colorpicker.cs" />
+    <Compile Include="Assets\scripts\creator.cs" />
+    <Compile Include="Assets\scripts\cutter.cs" />
+    <Compile Include="Assets\scripts\delete.cs" />
     <Compile Include="Assets\scripts\doorscript.cs" />
+    <Compile Include="Assets\scripts\enlarger.cs" />
+    <Compile Include="Assets\scripts\floorid.cs" />
+    <Compile Include="Assets\scripts\furnitureswitcher.cs" />
+    <Compile Include="Assets\scripts\mover.cs" />
     <Compile Include="Assets\scripts\push.cs" />
     <Compile Include="Assets\scripts\smoothmaker.cs" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
-    <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
-    <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
-    <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
-    <None Include="Assets\ProCore\ProBuilder\readme.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+    <Compile Include="Assets\scripts\switchcam.cs" />
+    <Compile Include="Assets\scripts\toolmanager.cs" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\About\changelog.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\materials\Wood texture floor_01\readme.txt" />
+    <None Include="Assets\libs\Lomenu UI\3rd Party Assets\Dissolve Edge by Moonflower Carnivore\Shaders\Transparent_Unlit_DissolveEdge.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\libs\GazeUI For Canvas\ReadMe.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald Bold - OFL.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Fonts\NotoSans - License.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\libs\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\libs\Lomenu UI\3rd Party Assets\Dissolve Edge by Moonflower Carnivore\readme_DissolveEdge.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
+    <None Include="Assets\libs\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
+    <None Include="Assets\libs\Lomenu UI\Shaders\UI Blur.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
+    <None Include="Assets\libs\ProCore\ProBuilder\readme.txt" />
+    <None Include="Assets\libs\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
+    <None Include="Assets\libs\Lomenu UI\Read Me.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -320,19 +419,25 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-2017.3-Editor">
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-2017.3-Runtime">
+      <HintPath>C:/Users/My/Documents/GitHub/VRchitect/VRchitect/Assets/libs/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/My/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

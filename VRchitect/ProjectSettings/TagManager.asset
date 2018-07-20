@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UI
+  - UI2
+  - second
+  - ddlc
+  - wall
+  - floor
+  - door
+  - window
   layers:
   - Default
   - TransparentFX
@@ -15,7 +23,7 @@ TagManager:
   - 
   - PostProcessing
   - grass
-  - 
+  - wall
   - 
   - 
   - 
